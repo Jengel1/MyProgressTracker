@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/tFrag1EditorLayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:gravity="center_vertical"
+android:background="@color/colorBackground">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/saveTFrag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Info"
+            android:layout_alignParentRight="true"
+            android:onClick="handleSaveTermInfo"/>
+
+        <ImageView
+            android:id="@+id/imageTermIcon"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_term"/>
+
+        <EditText
+            android:id="@+id/editTName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:ems="18"
+            android:textSize="18sp"
+            android:hint="Term Name:"
+            android:inputType="textPersonName"
+            android:layout_below="@id/imageTermIcon"
+            android:layout_marginTop="4dp"/>
+
+        <Button
+            android:id="@+id/tStartDateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Start Date:"
+            android:layout_below="@+id/editTName"
+            android:onClick="handleTStartDateBtn"/>
+
+        <TextView
+            android:id="@+id/tvTStartDateResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tStartDateBtn"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="26dp"
+            android:singleLine="true"
+            android:text="mm/dd/yyyy"
+            android:textColor="@color/list_item_text"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/tEndDateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set End Date:"
+            android:layout_below="@+id/editTName"
+            android:layout_alignParentRight="true"
+            android:onClick="handleTEndDateBtn"/>
+
+        <TextView
+            android:id="@+id/tvTEndDateResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tStartDateBtn"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="16dp"
+            android:singleLine="true"
+            android:text="mm/dd/yyyy"
+            android:textColor="@color/list_item_text"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/termStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Term Status:"
+            android:textSize="18sp"
+            android:textColor="@color/list_item_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/tvTEndDateResult"/>
+
+        <RadioGroup
+            android:id="@+id/termRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:layout_below="@+id/termStatus"
+            android:checkedButton="@id/btn1">
+
+            <RadioButton
+                android:id="@+id/btn1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Plan To Take"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/btn2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="In Progress"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/btn3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Complete"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>

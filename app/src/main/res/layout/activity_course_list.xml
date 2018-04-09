@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jdevelopment.myprogresstracker.CourseList">
+
+    <ListView
+        android:id="@+id/courseList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+    <at.markushi.ui.CircleButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:cb_color="@color/colorAccent"
+        app:cb_pressedRingWidth="8dp"
+        android:src="@drawable/ic_action_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="handleAddCourseBtn"
+        />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cFrag2EditorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/saveExam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Save Exam"/>
+
+    <Button
+        android:id="@+id/deleteExam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Delete Exam"/>
+
+    <Button
+        android:id="@+id/cancelAndReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return to List"/>
+
+    <ImageView
+        android:id="@+id/imageExamIcon"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_below="@id/saveExam"
+        android:src="@drawable/ic_assessment"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/examTypeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exam Type:"
+        android:textColor="@color/list_item_text"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageExamIcon"
+        />
+
+    <RadioGroup
+        android:id="@+id/examRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/examTypeTitle"
+        android:checkedButton="@id/btn1">
+
+        <RadioButton
+            android:id="@+id/btn1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Objective Assessment"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/btn2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Performance Assessment"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/dateAndAlertLayout"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examRadioGroup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/setDateLayout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/examRadioGroup"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/examDueDateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Set Due Date"
+                android:onClick="handleExamDueDateBtn"/>
+
+            <TextView
+                android:id="@+id/examDueDateResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:text="mm/dd/yyyy"
+                android:textColor="@color/list_item_text"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/setAlarmLayout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:id="@+id/setAlarmLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:singleLine="true"
+                android:text="Exam Alarm"
+                android:textColor="@color/list_item_text"
+                android:textSize="18sp"/>
+
+            <Switch
+                android:id="@+id/setAlarmBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Off/On: "/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/examStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exam Status:"
+        android:textSize="18sp"
+        android:textColor="@color/list_item_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/dateAndAlertLayout"/>
+
+    <RadioGroup
+        android:id="@+id/examStatusRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/examStatus"
+        android:checkedButton="@id/statusBtn3">
+
+        <RadioButton
+            android:id="@+id/statusBtn1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Passed"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/statusBtn2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Failed"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/statusBtn3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Not taken yet"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

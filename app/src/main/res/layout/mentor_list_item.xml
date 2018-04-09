@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/imageMentorIcon"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:src="@drawable/ic_mentor" />
+
+    <TextView
+        android:id="@+id/tvMentorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@+id/imageMentorIcon"
+        android:layout_toRightOf="@+id/imageMentorIcon"
+        android:singleLine="true"
+        android:text="Mentor Name"
+        android:textColor="@color/list_item_text"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_marginLeft="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMentorName"
+        android:text="555-555-5555"
+        android:layout_toEndOf="@+id/imageMentorIcon"
+        android:layout_toRightOf="@+id/imageMentorIcon"
+        android:singleLine="true"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_marginLeft="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPhone"
+        android:text="email@email.com"
+        android:layout_toEndOf="@+id/imageMentorIcon"
+        android:layout_toRightOf="@+id/imageMentorIcon"
+        android:singleLine="true"
+        android:textSize="16sp"/>
+
+
+</RelativeLayout>

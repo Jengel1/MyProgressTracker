@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jdevelopment.myprogresstracker">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TermList"
+            android:label="Terms"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jdevelopment.myprogresstracker.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CourseList"
+            android:label="Courses"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jdevelopment.myprogresstracker.MainActivity" />
+        </activity>
+        <activity
+            android:name=".MentorList"
+            android:label="Mentors"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jdevelopment.myprogresstracker.MainActivity" />
+        </activity>
+
+        <provider
+            android:name=".DBContentProvider"
+            android:authorities="com.jdevelopment.myprogresstracker.dbcontentprovider"
+            android:exported="false" />
+
+        <activity
+            android:name=".MentorEditor"
+            android:label="Edit Mentor"
+            android:parentActivityName=".MentorList">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jdevelopment.myprogresstracker.MainActivity" />
+        </activity>
+        <activity
+            android:name=".TermDetails"
+            android:label="@string/title_activity_term_details"
+            android:parentActivityName=".TermList"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jdevelopment.myprogresstracker.TermList" />
+        </activity>
+        <activity
+            android:name=".CourseDetails"
+            android:label="@string/title_activity_course_details"
+            android:parentActivityName=".CourseList"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jdevelopment.myprogresstracker.CourseList" />
+        </activity>
+
+        <receiver
+            android:name=".Alerts"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

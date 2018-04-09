@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tFrag2BaseLayout"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <Button
+        android:id="@+id/editCourseBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Edit Term Courses"/>
+
+    <ListView
+        android:id="@id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/editCourseBtn"
+        android:background="@color/colorBackground"
+        android:layout_weight="1"
+        android:drawSelectorOnTop="false"
+        android:nestedScrollingEnabled="true"/>
+
+    <TextView android:id="@id/android:empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:text="You should add at least one course to this term"/>
+
+</RelativeLayout>

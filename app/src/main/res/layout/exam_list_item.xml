@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageExamIcon"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:src="@drawable/ic_assessment" />
+
+    <TextView
+        android:id="@+id/listExamType"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@id/imageExamIcon"
+        android:layout_toRightOf="@id/imageExamIcon"
+        android:singleLine="true"
+        android:text="Exam Title"
+        android:textColor="@color/list_item_text"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/examDueDateLabel"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listExamType"
+        android:layout_marginLeft="4dp"
+        android:layout_toEndOf="@id/imageExamIcon"
+        android:layout_toRightOf="@id/imageExamIcon"
+        android:singleLine="true"
+        android:text="Due date:"
+        android:textColor="@color/list_item_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/listExamDueDate"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listExamType"
+        android:layout_marginLeft="4dp"
+        android:layout_toEndOf="@id/examDueDateLabel"
+        android:layout_toRightOf="@id/examDueDateLabel"
+        android:singleLine="true"
+        android:text="mm/dd/yyyy"
+        android:textColor="@color/list_item_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/examStatusLabel"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examDueDateLabel"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@id/imageExamIcon"
+        android:layout_toRightOf="@id/imageExamIcon"
+        android:singleLine="true"
+        android:text="Status:"
+        android:textColor="@color/list_item_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/listExamStatus"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examDueDateLabel"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@id/examStatusLabel"
+        android:layout_toRightOf="@id/examStatusLabel"
+        android:singleLine="true"
+        android:text="status"
+        android:textColor="@color/list_item_text"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/alarmSetCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/listExamType"
+        android:layout_marginRight="10dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:text="Alarm Set" />
+
+
+</RelativeLayout>

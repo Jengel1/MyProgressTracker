@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jdevelopment.myprogresstracker.MentorEditor">
+
+    <ImageView
+        android:id="@+id/imageMentorIcon"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_mentor" />
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mentor Name:"
+        android:textSize="18sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="12dp"
+        android:layout_below="@id/imageMentorIcon"/>
+
+    <EditText
+        android:id="@+id/editMName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="14"
+        android:textSize="18sp"
+        android:inputType="textPersonName"
+        android:layout_below="@id/nameLabel"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="12dp"/>
+
+    <TextView
+        android:id="@+id/phoneLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone:"
+        android:textSize="18sp"
+        android:layout_below="@id/editMName"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="12dp"/>
+
+    <EditText
+        android:id="@+id/editMPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:maxLength="14"
+        android:textSize="18sp"
+        android:ems="14"
+        android:layout_below="@id/phoneLabel"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="12dp"/>
+
+
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:"
+        android:textSize="18sp"
+        android:layout_below="@id/editMPhone"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="12dp"/>
+
+    <EditText
+        android:id="@+id/editMEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:textSize="18sp"
+        android:ems="14"
+        android:layout_below="@id/emailLabel"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="12dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/imageCourseIcon"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:src="@drawable/ic_course"/>
+
+    <TextView
+        android:id="@+id/tvCourseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@id/imageCourseIcon"
+        android:layout_toRightOf="@id/imageCourseIcon"
+        android:singleLine="true"
+        android:text="C196 Mobile App Development"
+        android:textColor="@color/list_item_text"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:id="@+id/courseStartLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCourseName"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@id/imageCourseIcon"
+        android:layout_toRightOf="@id/imageCourseIcon">
+
+        <TextView
+            android:id="@+id/tvCStartDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Start: "
+            android:textColor="@color/list_item_text"
+            android:textSize="16sp"/>
+
+
+        <TextView
+            android:id="@+id/tvCStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="mm/dd/yyyy"
+            android:textColor="@color/list_item_text"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/courseEndLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/courseStartLayout"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@id/imageCourseIcon"
+        android:layout_toRightOf="@id/imageCourseIcon">
+
+        <TextView
+            android:id="@+id/tvCEndDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="End: "
+            android:textColor="@color/list_item_text"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tvCEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="mm/dd/yyyy"
+            android:textColor="@color/list_item_text"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvCourseListItemStatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="4dp"
+        android:layout_below="@id/tvCourseName"
+        android:text="Course Status:"
+        android:singleLine="true"
+        android:textColor="@color/list_item_text"
+        android:textSize="16sp"/>
+
+
+    <TextView
+        android:id="@+id/tvCourseListItemStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvCourseListItemStatusLabel"
+        android:layout_margin="4dp"
+        android:singleLine="true"
+        android:text="status"
+        android:textColor="@color/list_item_text"
+        android:textSize="16sp"/>
+
+
+</RelativeLayout>

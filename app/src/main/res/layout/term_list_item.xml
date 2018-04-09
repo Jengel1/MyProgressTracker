@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/imageTermIcon"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:src="@drawable/ic_term"/>
+
+    <TextView
+        android:id="@+id/tvTermName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@id/imageTermIcon"
+        android:layout_toRightOf="@id/imageTermIcon"
+        android:singleLine="true"
+        android:text="Term 1"
+        android:textColor="@color/list_item_text"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tvTStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvTermName"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@id/imageTermIcon"
+        android:layout_toRightOf="@id/imageTermIcon"
+        android:singleLine="true"
+        android:text="Start: mm/dd/yyyy"
+        android:textColor="@color/list_item_text"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tvTEndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tvTStartDate"
+        android:layout_margin="4dp"
+        android:layout_toEndOf="@id/imageTermIcon"
+        android:layout_toRightOf="@id/imageTermIcon"
+        android:singleLine="true"
+        android:text="End: mm/dd/yyyy"
+        android:textColor="@color/list_item_text"
+        android:textSize="16sp"/>
+
+
+    <TextView
+        android:id="@+id/tvTermListItemStatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="4dp"
+        android:layout_below="@id/tvTermName"
+        android:text="Term Status:"
+        android:singleLine="true"
+        android:textColor="@color/list_item_text"
+        android:textSize="16sp"/>
+
+
+    <TextView
+        android:id="@+id/tvTermListItemStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTermListItemStatusLabel"
+        android:layout_margin="4dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:singleLine="true"
+        android:text="status"
+        android:textColor="@color/list_item_text"
+        android:textSize="16sp"/>
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/cFrag3EmailLayout"
+    android:background="@color/colorBackground">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <Button
+        android:id="@+id/sendEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Send Email"/>
+
+    <Button
+        android:id="@+id/cancelEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel Email"/>
+
+    <TextView
+        android:id="@+id/tvToLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cancelEmail"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:text="To:"
+        android:textSize="20sp"
+        android:textColor="@color/list_item_text"/>
+
+    <EditText
+        android:id="@+id/etTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cancelEmail"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/tvToLabel"
+        android:hint="email@email.com"/>
+
+    <TextView
+        android:id="@+id/tvSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvToLabel"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="20dp"
+        android:text="Subject:"
+        android:textSize="20sp"
+        android:textColor="@color/list_item_text"/>
+
+    <EditText
+        android:id="@+id/etSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etTo"
+        android:layout_toRightOf="@id/tvSubject"
+        android:layout_marginLeft="4dp"
+        android:hint="Subject"/>
+
+    <TextView
+        android:id="@+id/emailContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvSubject"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="20dp"
+        android:text="Email Content..."
+        android:textSize="18sp"
+        android:textColor="@color/list_item_text"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
