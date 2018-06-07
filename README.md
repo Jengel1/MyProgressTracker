@@ -9,6 +9,7 @@ The project was constructed using Android Studio.
 */
 
 /*
-See the file... for a video tutorial of the app funtionality in action.
-See the file... for the application storyboard
+See the WatchMe_appTutorial.mp4 file for a video tutorial of the app funtionality in action.
+    -Note: video is in raw form and and must be downloaded to view-
+See the App_StoryBoard.pptx file for a Power Point presentation on the application flow and storyboard.
 */
